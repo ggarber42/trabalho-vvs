@@ -26,7 +26,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pipenv
         pipenv install
-        yarn install
     - name: Run Tests
       run: |
+        pipenv shell
         python manage.py test
