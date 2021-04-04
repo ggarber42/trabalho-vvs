@@ -25,9 +25,8 @@ jobs:
       run: |
         cd server/
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        cd ..
-        cd client/
+        pip install pipenv
+        pipenv install
         yarn install
     - name: Build Client UI
       run: |
