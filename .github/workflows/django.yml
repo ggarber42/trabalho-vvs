@@ -28,9 +28,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install pipenv
         pipenv install     
-    - name: Run localserver
-      run: |
-        pipenv run python manage.py runserver
     - name: Run Tests
       run: |
         pipenv run python manage.py test
