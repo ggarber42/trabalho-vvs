@@ -28,11 +28,6 @@ jobs:
         pip install pipenv
         pipenv install
         yarn install
-    - name: Build Client UI
-      run: |
-        cd client/
-        yarn serve
     - name: Run Tests
       run: |
-        cd server/
         python manage.py test
