@@ -2,7 +2,10 @@ from django.views.generic import TemplateView
 from django.views.decorators.cache import never_cache
 from rest_framework import viewsets
 
-from .models import Message, MessageSerializer
+from rest_framework import generics
+from django.shortcuts import render
+
+from .models import Message, MessageSerializer, Todo, TodoSerializer
 
 
 # Serve Vue Application
@@ -16,4 +19,11 @@ class MessageViewSet(viewsets.ModelViewSet):
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
 
+class ListTodo(generics.ListCreateAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
+
+class DetailTodo(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
 

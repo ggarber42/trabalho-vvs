@@ -7,11 +7,12 @@ name = "pypi"
 django = "*"
 djangorestframework = "*"
 gunicorn = "*"
-whitenoise = "==4.0"
+whitenoise = ">=5"
 dj-database-url = "*"
 psycopg2-binary = "*"
+django-cors-headers = "*"
+selenium = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.6"

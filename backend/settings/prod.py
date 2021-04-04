@@ -24,3 +24,9 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', SECRET_KEY)
 
 # Set to your Domain here (eg. 'django-vue-template-demo.herokuapp.com')
 ALLOWED_HOSTS = ['*']
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8000',
+    'http://localhost:8080',
+    
+)
