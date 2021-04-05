@@ -13,7 +13,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.6, 3.7, 3.8]
+        python-version: [3.7, 3.8]
 
     steps:
     - uses: actions/checkout@v2
@@ -30,7 +30,6 @@ jobs:
         pipenv install
     - name: Set up Docker
       run: |
-          docker build .
           docker-compose up -d
     - name: Run Tests
       run: |
