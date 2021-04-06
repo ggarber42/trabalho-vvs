@@ -59,6 +59,7 @@ class CrudTest(TestCase):
         self.assertEquals(status_delete, 204)
         
 
+
 class TestUI(StaticLiveServerTestCase):
     """
         Teste Funcional: Verificando se a interface do usuário é montada e funciona de acordo
@@ -68,7 +69,7 @@ class TestUI(StaticLiveServerTestCase):
         super().setUpClass()
         options = Options()
         options.headless = True 
-        # options.headless = False
+        options.headless = False
         cls.selenium = WebDriver(options=options,executable_path=r'./geckodriver.exe')
         cls.selenium.implicitly_wait(10)
 
