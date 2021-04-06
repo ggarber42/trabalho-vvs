@@ -28,6 +28,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install pipenv
         pipenv install
+        yarn install
+    - name: Build Vue SPA
+        yarn build
     - name: Set up Docker
       run: |
           docker-compose up -d
