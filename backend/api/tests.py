@@ -47,18 +47,18 @@ class CrudTest(TestCase):
         self.assertEquals(response.status_code, 200)
 
 
-    # def test_crud_todo(self):
-    #     response_create = requests.post(self.url,data={'name':'teste de criacao'})
-    #     test_todo_id = json.loads(response_create.content)['id']
-    #     test_todo_name = json.loads(response_create.content)['name']
-    #     status_create = response_create.status_code
-    #     status_read = requests.get('{}{}/'.format(self.url,test_todo_id)).status_code
-    #     status_update = requests.put('{}{}/'.format(self.url,test_todo_id),{'name':test_todo_name,'completed':'true'}).status_code #200
-    #     status_delete = requests.delete('{}{}/'.format(self.url,test_todo_id)).status_code
-    #     self.assertEquals(status_create, 201)
-    #     self.assertEquals(status_read, 200)
-    #     self.assertEquals(status_update, 200)
-    #     self.assertEquals(status_delete, 204)
+    def test_crud_todo(self):
+        response_create = requests.post(self.url,data={'name':'teste de criacao'})
+        test_todo_id = json.loads(response_create.content)['id']
+        test_todo_name = json.loads(response_create.content)['name']
+        status_create = response_create.status_code
+        status_read = requests.get('{}{}/'.format(self.url,test_todo_id)).status_code
+        status_update = requests.put('{}{}/'.format(self.url,test_todo_id),{'name':test_todo_name,'completed':'true'}).status_code #200
+        status_delete = requests.delete('{}{}/'.format(self.url,test_todo_id)).status_code
+        self.assertEquals(status_create, 201)
+        self.assertEquals(status_read, 200)
+        self.assertEquals(status_update, 200)
+        self.assertEquals(status_delete, 204)
         
 
 # class TestUI(StaticLiveServerTestCase):
