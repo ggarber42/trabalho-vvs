@@ -49,6 +49,7 @@ class CrudTest(TestCase):
 
     def test_crud_todo(self):
         response_create = requests.post(self.url,data={'name':'teste de criacao'})
+        print('################################################')
         print(response_create.content)
         test_todo_id = json.loads(response_create.content)['id']
         test_todo_name = json.loads(response_create.content)['name']
