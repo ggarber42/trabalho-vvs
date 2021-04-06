@@ -30,6 +30,7 @@ jobs:
         pipenv install
         yarn install
     - name: Build Vue SPA
+      run: |
         yarn build
     - name: Set up Docker
       run: |
