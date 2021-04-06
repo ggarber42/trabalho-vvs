@@ -38,7 +38,9 @@ class TodoModelTest(TestCase):
         self.assertEquals(expected_object_completed, False)
 
 class CrudTest(TestCase):
-
+    """
+    Teste de integração testando se as funcionalidades do CRUD rodam na imagem do docker
+    """
     def setUp(self):
         self.url = 'http://127.0.0.1:8000/api/v1/'
 
@@ -61,29 +63,37 @@ class CrudTest(TestCase):
         self.assertEquals(status_delete, 204)
         
 
-# class TestUI(StaticLiveServerTestCase):
+class TestUI(StaticLiveServerTestCase):
 
-#     @classmethod
-#     def setUpClass(cls):
-#         super().setUpClass()
-#         options = Options()
-#         options.headless = True 
-#         cls.selenium = WebDriver(options=options,executable_path=r'./geckodriver.exe')
-#         cls.selenium.implicitly_wait(10)
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        options = Options()
+        options.headless = True 
+        cls.selenium = WebDriver(options=options,executable_path=r'./geckodriver.exe')
+        cls.selenium.implicitly_wait(10)
 
-#     @classmethod
-#     def tearDownClass(cls):
-#         cls.selenium.quit()
-#         super().tearDownClass()
+    @classmethod
+    def tearDownClass(cls):
+        cls.selenium.quit()
+        super().tearDownClass()
 
-    # def test_crud(self):
-    #     self.selenium.get("http://127.0.0.1:8000/")
-        # self.selenium.set_window_size(915, 472)
-        # self.selenium.find_element(By.ID, "__BVID__7").click()
-        # self.selenium.find_element(By.ID, "__BVID__7").send_keys("Teste")
-        # self.selenium.find_element(By.CSS_SELECTOR, "form").click()
-        # self.selenium.find_element(By.CSS_SELECTOR, ".btn-primary").click()
-        # self.selenium.find_element(By.CSS_SELECTOR, ".list-group:nth-child(3) input").click()
-        # self.selenium.find_element(By.CSS_SELECTOR, ".list-group:nth-child(3) > .list-group-item").click()
-        # self.selenium.find_element(By.CSS_SELECTOR, ".list-group:nth-child(3) input").click()
-        # self.selenium.find_element(By.CSS_SELECTOR, ".list-group:nth-child(3) .btn").click()
+    def test_crud(self):
+        self.selenium.get("http://127.0.0.1:8000/")
+        self.selenium.set_window_size(915, 472)
+        self.selenium.find_element(By.CSS_SELECTOR, ".nav-item").click()
+        self.selenium.find_element(By.CSS_SELECTOR, ".nav-item").click()
+        self.selenium.find_element(By.ID, "__BVID__7").click()
+        self.selenium.find_element(By.ID, "__BVID__7").send_keys("Teste")
+        self.selenium.find_element(By.CSS_SELECTOR, ".card-title").click()
+        elements = self.selenium.find_elements(By.CSS_SELECTOR, ".nav-item")
+        assert len(elements) > 0
+        value = self.selenium.find_element(By.ID, "__BVID__7").get_attribute("value")
+        assert value == "Teste"
+        self.selenium.find_element(By.CSS_SELECTOR, "form").click()
+        self.selenium.find_element(By.CSS_SELECTOR, ".btn-secondary").click()
+        self.selenium.find_element(By.ID, "__BVID__7").click()
+        self.selenium.find_element(By.ID, "__BVID__7").send_keys("novo teste")
+        self.selenium.find_element(By.ID, "app").click()
+        value = self.selenium.find_element(By.ID, "__BVID__7").get_attribute("value")
+        assert value == "novo teste"

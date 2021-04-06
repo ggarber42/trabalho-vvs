@@ -137,3 +137,169 @@ JavaScript error: resource://gre/modules/CrashManager.jsm, line 833: NotAllowedE
 ExceptionHandler::GenerateDump cloned child ExceptionHandler::WaitForContinueSignal waiting for continue signal...
 33193
 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+1617677479625	geckodriver	INFO	Listening on 127.0.0.1:35715
+1617677480600	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilevURykV"
+*** You are running in headless mode.
+
+(/usr/lib/firefox/firefox:49502): GLib-GObject-CRITICAL **: 02:51:26.023: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:49530): GLib-GObject-CRITICAL **: 02:51:26.264: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(/usr/lib/firefox/firefox:49606): GLib-GObject-CRITICAL **: 02:51:32.647: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1617677492648	Marionette	INFO	Listening on port 46079
+1617677493465	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:49608): GLib-GObject-CRITICAL **: 02:51:34.018: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1617677496369	Marionette	INFO	Stopped listening on port 46079
+1617680072151	geckodriver	INFO	Listening on 127.0.0.1:37075
+1617680073126	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSz9UlD"
+*** You are running in headless mode.
+
+(/usr/lib/firefox/firefox:52517): GLib-GObject-CRITICAL **: 03:34:39.678: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:52509): GLib-GObject-CRITICAL **: 03:34:39.769: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(/usr/lib/firefox/firefox:52593): GLib-GObject-CRITICAL **: 03:34:42.190: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1617680085127	Marionette	INFO	Listening on port 45275
+1617680085571	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617680089156	Marionette	INFO	Stopped listening on port 45275
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.error: "Could not load engine google@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.error: "Could not load engine amazondotcom@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.error: "Could not load engine wikipedia@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.error: "Could not load engine bing@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.error: "Could not load engine ddg@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.warn: SearchService: "_init: abandoning init due to shutting down"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource:///modules/EveryWindow.jsm, line 37: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIWindowMediator.getEnumerator]
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 833: NotAllowedError: Shutting down and refusing additional I/O tasks
+1617680204285	geckodriver	INFO	Listening on 127.0.0.1:53173
+1617680204291	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileBSBMkf"
+*** You are running in headless mode.
+
+(/usr/lib/firefox/firefox:52782): GLib-GObject-CRITICAL **: 03:36:47.851: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:52810): GLib-GObject-CRITICAL **: 03:36:48.073: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(/usr/lib/firefox/firefox:52886): GLib-GObject-CRITICAL **: 03:36:50.567: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:52888): GLib-GObject-CRITICAL **: 03:36:50.579: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1617680210582	Marionette	INFO	Listening on port 41319
+1617680210666	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617680213209	Marionette	INFO	Stopped listening on port 41319
+1617680509261	geckodriver	INFO	Listening on 127.0.0.1:41909
+1617680509268	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile8UnL5y"
+*** You are running in headless mode.
+
+(/usr/lib/firefox/firefox:53307): GLib-GObject-CRITICAL **: 03:41:51.531: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:53330): GLib-GObject-CRITICAL **: 03:41:51.724: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617680514031	Marionette	INFO	Listening on port 35667
+
+(/usr/lib/firefox/firefox:53407): GLib-GObject-CRITICAL **: 03:41:54.106: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:53409): GLib-GObject-CRITICAL **: 03:41:54.112: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1617680514119	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617680516383	Marionette	INFO	Stopped listening on port 35667
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 927: Error: Connection is not open.
+1617680540258	geckodriver	INFO	Listening on 127.0.0.1:40665
+1617680540265	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileZ5wHCv"
+*** You are running in headless mode.
+
+(/usr/lib/firefox/firefox:53579): GLib-GObject-CRITICAL **: 03:42:22.524: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:53602): GLib-GObject-CRITICAL **: 03:42:22.715: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617680545213	Marionette	INFO	Listening on port 46463
+
+(/usr/lib/firefox/firefox:53680): GLib-GObject-CRITICAL **: 03:42:25.267: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1617680545308	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617680547571	Marionette	INFO	Stopped listening on port 46463
+console.error: services.settings: 
+  main/cfr-fxa Signature failed  TypeError: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617681074251	geckodriver	INFO	Listening on 127.0.0.1:50803
+1617681074258	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileUIFpnX"
+*** You are running in headless mode.
+
+(/usr/lib/firefox/firefox:54538): GLib-GObject-CRITICAL **: 03:51:16.559: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(/usr/lib/firefox/firefox:54559): GLib-GObject-CRITICAL **: 03:51:18.460: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:54615): GLib-GObject-CRITICAL **: 03:51:21.636: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1617681081893	Marionette	INFO	Listening on port 43915
+1617681082011	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617681086555	Marionette	INFO	Stopped listening on port 43915
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.error: "Could not load engine google@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.error: "Could not load engine amazondotcom@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.error: "Could not load engine wikipedia@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.error: "Could not load engine bing@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.error: "Could not load engine ddg@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2550\"  data: no]"
+console.warn: SearchService: "_init: abandoning init due to shutting down"
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: resource:///modules/EveryWindow.jsm, line 37: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIWindowMediator.getEnumerator]
+1617681139235	geckodriver	INFO	Listening on 127.0.0.1:60107
+1617681139239	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile8v4WRK"
+*** You are running in headless mode.
+
+(/usr/lib/firefox/firefox:54799): GLib-GObject-CRITICAL **: 03:52:21.793: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:54826): GLib-GObject-CRITICAL **: 03:52:21.962: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617681144223	Marionette	INFO	Listening on port 42893
+
+(/usr/lib/firefox/firefox:54893): GLib-GObject-CRITICAL **: 03:52:24.268: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1617681144277	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617681146993	Marionette	INFO	Stopped listening on port 42893
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617681180226	geckodriver	INFO	Listening on 127.0.0.1:42223
+1617681180232	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile0TMw0Q"
+*** You are running in headless mode.
+
+(/usr/lib/firefox/firefox:55053): GLib-GObject-CRITICAL **: 03:53:03.012: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:55074): GLib-GObject-CRITICAL **: 03:53:03.184: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(/usr/lib/firefox/firefox:55138): GLib-GObject-CRITICAL **: 03:53:04.220: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1617681185577	Marionette	INFO	Listening on port 35779
+1617681185719	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617681188814	Marionette	INFO	Stopped listening on port 35779
