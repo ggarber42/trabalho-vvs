@@ -12,12 +12,17 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+import requests
+import json
+from django.test import Client
 
 from .models import Todo
 
 
 class TodoModelTest(TestCase):
-
+    """
+    Teste unitário verificando se o modelo Todo é montado de acordo com o esperado
+    """
     @classmethod
     def setUpTestData(cls):
         Todo.objects.create(name='first todo', completed=False)
@@ -32,23 +37,47 @@ class TodoModelTest(TestCase):
         expected_object_completed= todo.completed
         self.assertEquals(expected_object_completed, False)
 
-class TestUI(StaticLiveServerTestCase):
+class CrudTest(TestCase):
 
-    @classmethod
-    def setUpClass(cls):
-        super().setUpClass()
-        options = Options()
-        options.headless = True 
-        cls.selenium = WebDriver(options=options,executable_path=r'./geckodriver.exe')
-        cls.selenium.implicitly_wait(10)
+    def setUp(self):
+        self.url = 'http://127.0.0.1:8000/api/v1/'
 
-    @classmethod
-    def tearDownClass(cls):
-        cls.selenium.quit()
-        super().tearDownClass()
+    def test_get_todos(self):
+        response = requests.get(self.url)
+        self.assertEquals(response.status_code, 200)
 
-    def test_crud(self):
-        self.selenium.get("http://127.0.0.1:8000/")
+
+    def test_crud_todo(self):
+        response_create = requests.post(self.url,data={'name':'teste de criacao'})
+        test_todo_id = json.loads(response_create.content)['id']
+        test_todo_name = json.loads(response_create.content)['name']
+        status_create = response_create.status_code
+        status_read = requests.get('{}{}/'.format(self.url,test_todo_id)).status_code
+        status_update = requests.put('{}{}/'.format(self.url,test_todo_id),{'name':test_todo_name,'completed':'true'}).status_code #200
+        status_delete = requests.delete('{}{}/'.format(self.url,test_todo_id)).status_code
+        self.assertEquals(status_create, 201)
+        self.assertEquals(status_read, 200)
+        self.assertEquals(status_update, 200)
+        self.assertEquals(status_delete, 204)
+        
+
+# class TestUI(StaticLiveServerTestCase):
+
+#     @classmethod
+#     def setUpClass(cls):
+#         super().setUpClass()
+#         options = Options()
+#         options.headless = True 
+#         cls.selenium = WebDriver(options=options,executable_path=r'./geckodriver.exe')
+#         cls.selenium.implicitly_wait(10)
+
+#     @classmethod
+#     def tearDownClass(cls):
+#         cls.selenium.quit()
+#         super().tearDownClass()
+
+    # def test_crud(self):
+    #     self.selenium.get("http://127.0.0.1:8000/")
         # self.selenium.set_window_size(915, 472)
         # self.selenium.find_element(By.ID, "__BVID__7").click()
         # self.selenium.find_element(By.ID, "__BVID__7").send_keys("Teste")

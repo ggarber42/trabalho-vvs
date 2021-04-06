@@ -13,6 +13,7 @@ psycopg2-binary = "*"
 django-cors-headers = "*"
 selenium = "*"
 django-selenium-clean = "*"
+requests = "*"
 
 [dev-packages]
 
