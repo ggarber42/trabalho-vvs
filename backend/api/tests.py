@@ -1,8 +1,5 @@
 from django.test import TestCase
 
-
-# from django_selenium_clean import selenium, SeleniumTestCase, PageElement
-
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.firefox.options import Options
@@ -14,14 +11,13 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import requests
 import json
-from django.test import Client
 
 from .models import Todo
 
 
 class TodoModelTest(TestCase):
     """
-    Teste unitário verificando se o modelo Todo é montado de acordo com o esperado
+    Testes Unitários: Verificando se o objeto Todo é montado e tem o comportamento esperado
     """
     @classmethod
     def setUpTestData(cls):
@@ -39,7 +35,7 @@ class TodoModelTest(TestCase):
 
 class CrudTest(TestCase):
     """
-    Teste de integração testando se as funcionalidades do CRUD rodam na imagem do docker
+    Teste de Integração: Testando se as funcionalidades do CRUD rodam na imagem do docker
     """
     def setUp(self):
         self.url = 'http://127.0.0.1:8000/api/v1/'
@@ -55,7 +51,7 @@ class CrudTest(TestCase):
         test_todo_name = json.loads(response_create.content)['name']
         status_create = response_create.status_code
         status_read = requests.get('{}{}/'.format(self.url,test_todo_id)).status_code
-        status_update = requests.put('{}{}/'.format(self.url,test_todo_id),{'name':test_todo_name,'completed':'true'}).status_code #200
+        status_update = requests.put('{}{}/'.format(self.url,test_todo_id),{'name':test_todo_name,'completed':'true'}).status_code
         status_delete = requests.delete('{}{}/'.format(self.url,test_todo_id)).status_code
         self.assertEquals(status_create, 201)
         self.assertEquals(status_read, 200)
@@ -64,12 +60,15 @@ class CrudTest(TestCase):
         
 
 class TestUI(StaticLiveServerTestCase):
-
+    """
+        Teste Funcional: Verificando se a interface do usuário é montada e funciona de acordo
+    """
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
         options = Options()
         options.headless = True 
+        # options.headless = False
         cls.selenium = WebDriver(options=options,executable_path=r'./geckodriver.exe')
         cls.selenium.implicitly_wait(10)
 
@@ -78,16 +77,21 @@ class TestUI(StaticLiveServerTestCase):
         cls.selenium.quit()
         super().tearDownClass()
 
-    def test_crud(self):
+    def test_header(self):
         self.selenium.get("http://127.0.0.1:8000/")
         self.selenium.set_window_size(915, 472)
         self.selenium.find_element(By.CSS_SELECTOR, ".nav-item").click()
         self.selenium.find_element(By.CSS_SELECTOR, ".nav-item").click()
-        self.selenium.find_element(By.ID, "__BVID__7").click()
-        self.selenium.find_element(By.ID, "__BVID__7").send_keys("Teste")
         self.selenium.find_element(By.CSS_SELECTOR, ".card-title").click()
         elements = self.selenium.find_elements(By.CSS_SELECTOR, ".nav-item")
         assert len(elements) > 0
+        
+    
+    def test_text_field(self):
+        self.selenium.get("http://127.0.0.1:8000/")
+        self.selenium.set_window_size(915, 472)
+        self.selenium.find_element(By.ID, "__BVID__7").click()
+        self.selenium.find_element(By.ID, "__BVID__7").send_keys("Teste")
         value = self.selenium.find_element(By.ID, "__BVID__7").get_attribute("value")
         assert value == "Teste"
         self.selenium.find_element(By.CSS_SELECTOR, "form").click()
