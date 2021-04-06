@@ -81,7 +81,7 @@ class TestUI(StaticLiveServerTestCase):
     def test_crud(self):
         self.selenium.get("http://127.0.0.1:8000/")
         self.selenium.set_window_size(915, 472)
-        # self.selenium.find_element(By.CSS_SELECTOR, ".nav-item").click()
+        self.selenium.find_element(By.CSS_SELECTOR, ".nav-item").click()
         # self.selenium.find_element(By.CSS_SELECTOR, ".nav-item").click()
         # self.selenium.find_element(By.ID, "__BVID__7").click()
         # self.selenium.find_element(By.ID, "__BVID__7").send_keys("Teste")
