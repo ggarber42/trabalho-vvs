@@ -42,9 +42,9 @@ class CrudTest(TestCase):
     def setUp(self):
         self.url = 'http://127.0.0.1:8000/api/v1/'
 
-    def test_get_todos(self):
-        response = requests.get(self.url)
-        self.assertEquals(response.status_code, 200)
+    # def test_get_todos(self):
+    #     response = requests.get(self.url)
+    #     self.assertEquals(response.status_code, 200)
 
 
     def test_crud_todo(self):
