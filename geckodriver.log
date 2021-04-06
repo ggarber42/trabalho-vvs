@@ -421,3 +421,19 @@ JavaScript error: resource://gre/modules/CrashManager.jsm, line 833: NotAllowedE
 ExceptionHandler::GenerateDump cloned child ExceptionHandler::WaitForContinueSignal waiting for continue signal...
 9393
 ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+1617718012295	geckodriver	INFO	Listening on 127.0.0.1:52251
+1617718012299	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJOMPmp"
+*** You are running in headless mode.
+
+(/usr/lib/firefox/firefox:9714): GLib-GObject-CRITICAL **: 14:06:54.163: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:9736): GLib-GObject-CRITICAL **: 14:06:54.262: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(/usr/lib/firefox/firefox:9811): GLib-GObject-CRITICAL **: 14:06:56.228: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1617718016238	Marionette	INFO	Listening on port 36353
+1617718016330	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617718018983	Marionette	INFO	Stopped listening on port 36353
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
