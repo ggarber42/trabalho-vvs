@@ -68,7 +68,7 @@ class TestUI(StaticLiveServerTestCase):
     def setUpClass(cls):
         super().setUpClass()
         options = Options()
-        options.headless = True 
+        # options.headless = True 
         options.headless = False
         cls.selenium = WebDriver(options=options,executable_path=r'./geckodriver.exe')
         cls.selenium.implicitly_wait(10)
